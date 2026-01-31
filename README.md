@@ -23,3 +23,54 @@
     <script src="script.js"></script>
 </body>
 </html>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffdde1;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevents scrollbars when button moves */
+}
+
+.container {
+    text-align: center;
+}
+
+#valentine-card img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 2em;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 60px; /* Space for the absolute positioned buttons */
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #888;
+    color: white;
+    position: absolute;
+}
