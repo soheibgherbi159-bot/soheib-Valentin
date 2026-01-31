@@ -74,3 +74,28 @@ button {
     color: white;
     position: absolute;
 }
+const yesBtn = document.querySelector('#yesBtn');
+const noBtn = document.querySelector('#noBtn');
+const question = document.querySelector('#question');
+const mainImage = document.querySelector('#main-image');
+
+// When Douaa clicks Yes
+yesBtn.addEventListener('click', () => {
+    question.innerHTML = "I love you, Douaa!! ❤️";
+    // Happy GIF
+    mainImage.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2ZicDhkbmZ6bmZ6bmZ6bmZ6bmZ6bmZ6bmZ6bmZ6bmZ6bmZ6bmZ6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/5K7ngC8KC3hYE/giphy.gif";
+    
+    // Hide the No button and the Yes button after clicking
+    noBtn.style.display = 'none';
+    yesBtn.style.display = 'none';
+});
+
+// When Douaa tries to click No, it jumps away
+noBtn.addEventListener('mouseover', () => {
+    // Calculate random position within the window
+    const x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
+    const y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
+    
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+});
